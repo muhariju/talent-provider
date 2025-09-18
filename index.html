@@ -320,36 +320,7 @@
     <script src="https://adminlte.io/themes/v3/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="https://adminlte.io/themes/v3/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <script>
-      disableBack();
-      function disableBack(){
-        history.pushState(null, null, window.location.href);
-        history.back();
-        window.onpopstate = () => history.forward();
-      }
-        $(document).ready(function () {
-            $('[name="password"]').on('keydown', function (e) {
-                if (e.keyCode === 13) {
-                    login();
-                }
-            });
-        })
-        function msg(data){
-          if(data=="Failed"){
-            $(".login-box-msg").addClass("text-danger");
-            $(".login-box-msg").html("Login Failed!");
-          }else{
-            $(".login-box-msg").addClass("text-success");
-            $(".login-box-msg").html("Login Success");
-            window.top.location.href=data;
-          }
-        }
-        function login() {
-            var username = $('[name="username"]').val();
-            var password = $('[name="password"]').val();
-            $(".login-box-msg").removeClass("text-danger");
-            $(".login-box-msg").removeClass("text-success");
-            google.script.run.withSuccessHandler(msg).cekLogin(username,password);
-        }
+     
     </script>
 </body>
 
