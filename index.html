@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <base target="_top">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+    <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+		<link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/toastr/toastr.min.css">
+		<link rel="stylesheet" href="https://adminlte.io/themes/v3/dist/css/adminlte.min.css?v=3.2.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <style>
+     .brand-image{
+      height:40px!important;
+     }
+     table{
+      font-size: .875rem;
+     }
+    .loader{
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #00a69d;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .btn.dropdown-toggle{
+      border: 1px solid #ced4da;
+      padding:0.34rem .75rem!important;
+    }
+    .bg-nds{
+      background-color: #00a69d;
+    }
+    .color-nds{
+      color: #00a69d;
+    }
+    .border-nds{
+      border: 1px solid #00a69d;
+    }
+    .btn-nds{
+      color:#FFF;
+      background-color: #00a69d;
+      border: 1px solid #00a69d00;
+    }
+    .btn-nds:hover{
+      color:#00a69d;
+      background-color: #00a69d00;
+      border: 1px solid #00a69d;
+    }
+    .bg-dark {
+      background-color: #00a69d;
+    }
+    .btn-dark,.btn-light:hover, .btn-light:active, .btn-light:focus,.dropdown-item:hover,.dropdown-item:active,.dropdown-item:focus {
+      background-color: #00a69d;
+      border-color: #00a69d;
+      color:#FFF;
+    }
+    .dropdown-toggle.btn-light:hover, .dropdown-toggle.btn-light:active, .dropdown-toggle.btn-light:focus{
+      color: #1f2d3d;
+      background-color: #f8f9fa;
+      border-color: #f8f9fa;
+    }
+    table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before{
+      background-color: #00a69d;
+    }
+    .page-link{
+      color:#00a69d;
+    }
+    .page-link:hover, .page-link:active, .page-link:focus, .page-item.active .page-link{
+      background-color: #00a69d;
+      color:#FFF;
+      border-color: #00a69d;
+    }
+    .btn-dark:hover, .btn-dark:active, .btn-dark:focus {
+      background-color: #107772!important;
+      border-color: #107772!important;
+    }
+    .btn-light{
+      color:#00a69d;
+      border:2px solid #00a69d;
+    }
+    .dropdown-toggle.btn-light{
+      color:#495057;
+    }
+    .btn-primary{
+      background-color: #00a69d;
+      border-color: #00a69d;
+    }
+    .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+      background-color: #107772!important;
+      border-color: #107772!important;
+    }
+    .btn-info{
+      background-color: #00a69dc2;
+      border-color: #00a69d;
+    }
+    .btn-info:hover, .btn-info:active, .btn-info:focus {
+      background-color: #00a69d!important;
+      border-color: #00a69d!important;
+    }
+    a{
+      cursor: pointer!important;
+    }
+    </style>
+	</head>
+
+<style>
+    body {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(0 166 157 / 80%) 100%);
+    }
+
+    .card {
+        background-color: rgb(255, 255, 255, 0.6);
+    }
+
+    .card-nds.card-outline {
+        border-top: 3px solid #00a69d;
+    }
+
+    @keyframes move_wave {
+        0% {
+            transform: translateX(0) translateZ(0) scaleY(1)
+        }
+
+        50% {
+            transform: translateX(-25%) translateZ(0) scaleY(0.55)
+        }
+
+        100% {
+            transform: translateX(-50%) translateZ(0) scaleY(1)
+        }
+    }
+
+    .waveWrapper {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        z-index: -10;
+    }
+
+    .waveWrapperInner {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+        bottom: 30px;
+    }
+
+    .waveWrapperInnerbg {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        overflow: hidden;
+        bottom: 0px;
+    }
+
+    .bgMiddle {
+        z-index: 10;
+        opacity: 0.75;
+    }
+
+    .bgBottom {
+        z-index: 5;
+    }
+
+    .wave {
+        position: absolute;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background-repeat: repeat no-repeat;
+        background-position: 0 bottom;
+        transform-origin: center bottom;
+    }
+
+    .waveTop {
+        background-size: 50% 200px;
+    }
+
+    .waveAnimation .waveTop {
+        animation: move_wave 8s linear infinite;
+    }
+
+    .waveMiddle {
+        background-size: 50% 200px;
+    }
+
+    .waveAnimation .waveMiddle {
+        animation: move_wave 7s linear infinite;
+    }
+
+    .waveBottom {
+        background-size: 50% 220px;
+    }
+
+    .waveAnimation .waveBottom {
+        animation: move_wave 6s linear infinite;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .waveTop {
+            background-size: 50% 70px;
+        }
+
+        .waveMiddle {
+            background-size: 50% 80px;
+        }
+
+        .waveBottom {
+            background-size: 50% 100px;
+        }
+
+        .waveWrapperInner {
+            bottom: 120px;
+        }
+
+        .waveWrapperInnerbg {
+            height: 120px;
+        }
+    }
+</style>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <!-- /.login-logo -->
+        <div class="card card-outline card-nds">
+            <div class="card-header text-center">
+                <div style="border-radius:50%;width:120px;height:120px;border:3px solid #00a69d;    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);margin-top:-70px"
+                    class="bg-white p-3">
+                    <img src="https://nds.co.id/wp-content/uploads/2016/08/nds-logo-big-200x200.png" width="80px">
+                </div>
+                <p class="text-gray float-right" style="margin-top:-40px">IT Talent Provider</p>
+            </div>
+            <div class="card-body pt-0">
+                <p class="login-box-msg py-3 m-0"></p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Username" name="username">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user color-nds"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" placeholder="Password" name="password">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock color-nds"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- /.col -->
+                    <div class="col-12 mx-auto pt-2 pb-3">
+                        <button onclick="return login()" class="btn btn-nds btn-block py-2">LOGIN</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.social-auth-links -->
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.login-box -->
+    <div class="waveWrapper waveAnimation">
+        <div class="waveWrapperInner bgTop">
+            <div class="wave waveTop" style="background-image: url(https://muhariju.github.io/talent-provider/wave.svg)">
+            </div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+            <div class="wave waveMiddle" style="background-image: url(https://muhariju.github.io/talent-provider/wave.svg)">
+            </div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+            <div class="wave waveBottom" style="background-image: url(https://muhariju.github.io/talent-provider/wave.svg)">
+            </div>
+        </div>
+        <div class="waveWrapperInnerbg bg-nds">
+            &nbsp;
+        </div>
+    </div>
+    <script src="https://adminlte.io/themes/v3/plugins/jquery/jquery.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/toastr/toastr.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/chart.js/Chart.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/sweetalert2/sweetalert2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://adminlte.io/themes/v3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+
+    <script src="https://adminlte.io/themes/v3/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/jszip/jszip.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script>
+      disableBack();
+      function disableBack(){
+        history.pushState(null, null, window.location.href);
+        history.back();
+        window.onpopstate = () => history.forward();
+      }
+        $(document).ready(function () {
+            $('[name="password"]').on('keydown', function (e) {
+                if (e.keyCode === 13) {
+                    login();
+                }
+            });
+        })
+        function msg(data){
+          if(data=="Failed"){
+            $(".login-box-msg").addClass("text-danger");
+            $(".login-box-msg").html("Login Failed!");
+          }else{
+            $(".login-box-msg").addClass("text-success");
+            $(".login-box-msg").html("Login Success");
+            window.top.location.href=data;
+          }
+        }
+        function login() {
+            var username = $('[name="username"]').val();
+            var password = $('[name="password"]').val();
+            $(".login-box-msg").removeClass("text-danger");
+            $(".login-box-msg").removeClass("text-success");
+            google.script.run.withSuccessHandler(msg).cekLogin(username,password);
+        }
+    </script>
+</body>
+
+</html>
