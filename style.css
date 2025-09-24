@@ -1,0 +1,405 @@
+    body{
+       font-family: "Fira Sans", sans-serif;
+       padding-top:80px;
+       background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(0,221,255,0.1));
+    }
+
+    .color-nds{
+       color:#1EADA2;
+    }
+
+    .bg-nds{
+       background: linear-gradient(to right, #1EADA2, #01DDFF);
+    }
+
+    .bg-blue{
+      background-color:#00C2E0;
+    }
+
+    .bg-green{
+      background-color:#00B0A0;
+    }
+
+    .navbar-brand img{
+       height: 50px;
+       width: auto;
+    }
+
+    .nav-line{
+       background: linear-gradient(to right, #1EADA2, #01DDFF);
+       border:none;
+       padding:2px;
+       margin:0px;
+       opacity:1;
+    }
+
+    .line-e{
+       background: linear-gradient(to right, rgba(1, 221, 255, 1), rgba(30, 173, 162, 0.1));
+       border:none;
+       padding:2px;
+       margin:0px;
+       opacity:1;
+       margin-left:auto;
+    }
+    .line-s{
+       background: linear-gradient(to left, rgba(1, 221, 255, 1), rgba(30, 173, 162, 0.1));
+       border:none;
+       padding:2px;
+       margin:0px;
+       opacity:1;
+       margin-right:auto;
+    }
+
+    .line-foot{
+       background: linear-gradient(to left, rgba(1, 221, 255, 0.1), rgba(225, 225, 225, 1));
+       border:none;
+       padding:2px;
+       margin:0px;
+       opacity:1;
+       margin-right:auto;
+    }
+
+    .vector-1{
+       position: absolute;
+       margin-top: -80px;
+    }
+
+    .vector-2{
+       position: absolute;
+       right: 10px;
+       margin-top: -480px;
+    }
+
+    .navbar-toggler, .btn-career{
+       font-weight:500;
+       letter-spacing: 2px;
+       color:#FFF;
+       padding-top: 5px;
+       padding-bottom: 5px;
+       padding-left: 10px;
+       padding-right: 10px;
+       border-radius: 6px;
+       border: 3px solid transparent;
+       background: 
+         linear-gradient(to right, #01DDFF, #1EADA2) padding-box,  
+         linear-gradient(to right, #01DDFF, #1EADA2) border-box; 
+    }
+
+    .navbar-toggler:hover i, .btn-career:hover span{
+       background: linear-gradient(to right, #01DDFF, #1EADA2);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+
+       /* Untuk browser yang mendukung standar */
+       background-clip: text;
+       color: transparent;
+    }
+
+    .navbar-toggler:hover, .btn-career:hover{
+       color:#FFF;
+       background: 
+         linear-gradient(#FFF, #FFF) padding-box,  
+         linear-gradient(to right, #01DDFF, #1EADA2) border-box; 
+    }
+
+    .bg-slide{
+       background-image: url('img/slide/bg-slide.png');
+       background-size: cover;
+    }
+
+    .slide-fill, .slide-fill img{
+       height:200px;
+       border-radius:10px;
+    }
+
+    .curve {
+      display: inline-block;
+      position: absolute;
+      bottom: -10px;
+    }
+
+    .card-solution{
+      background:#000;
+      border-radius:20px 20px 0 0;
+      padding:30px 0 30px 0;
+    }
+
+    .card-solution-foot{
+      background:#00B0A0;
+      border-radius:0 0 20px 20px;
+      height: 25%;
+    }
+
+    .card-solution-foot-blue{
+      background:#00C2E0;
+      border-radius:0 0 20px 20px;
+
+      height: 25%;
+    }
+
+    .fade-img {
+      height: auto;
+
+      -webkit-mask-image: linear-gradient(to right, black 30%, transparent 100%);
+      mask-image: linear-gradient(to right, black 30%, transparent 100%);
+  
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+    }
+
+    .certif-slide {
+	margin-left:0px
+    }
+
+    #demoCarousel .item {
+      height: fit-content;
+      width: fit-content;
+      padding: 0.5rem;
+      border-radius: 10px;
+    }
+
+    .owl-item {
+      border-radius:10px;
+    }
+
+    .owl-item:nth-child(odd) {
+      background: #1EADA2!important;
+    }
+
+    .owl-item:nth-child(even) {
+      background: #C5F2EE!important;
+    }
+
+    .owl-dots{
+      position: absolute;
+      right: 0px;
+      top: -48px;
+    }
+
+    .owl-dot{
+      height:20px;
+      width:20px;
+      background-color:#C5F2EE!important;
+      border:3px solid #1EADA2!important;
+      border-radius: 50%;
+      margin:0px 3px;
+    }
+    .owl-dot span{
+      background-color:#C5F2EE!important;
+      margin:2.3px!important;
+    }
+    .owl-dot.active span{
+      height:11px!important;
+      width:11px!important;
+      margin:2px 1.9px 1.9px 1.9px!important;
+      background-color: #1EADA2!important;
+    }
+
+    .owl-dots button.owl-dot:nth-child(n+6) {
+     display: none;
+    }
+
+    .filter-label{
+     background-color:#62D1C7;
+     border-radius: 10px 0px 0px 10px;
+     padding: 5px 15px;
+     font-size:1.5rem;
+     color:#FFF;
+     font-weight:500;
+    }
+
+    .filter-select{
+     background-color: #65DBEE;
+     border-radius: 0px 10px 10px 0px;
+     padding: 5px 15px;
+     width:75%;	
+     font-size:1rem;
+     color:#FFF;
+     border:0px;
+     font-weight:500;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    .filter-select option{
+     background-color:#FFF;
+     color:#545454;
+    }
+
+    .filter-icon{
+     margin-left:-35px;
+     margin-right:18px;
+     padding-top:15px;
+     font-size:1rem;
+     color:#FFF;
+    }
+
+    .bg-foot{
+     background-color: #1EADA2;
+    }
+
+    #contact-us p{
+     font-weight:400;
+     font-size:0.9rem;
+    }
+
+    #contact-us .contact{
+     height: fit-content;
+    }
+
+    .copyright{
+     background-color:#5F5F5F;
+     font-weight: 400;
+     color: #FFF;
+     font-size: 0.8rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .fade-in {
+      animation: fadeIn 3s forwards;
+    }
+
+    @keyframes fadeOut {
+      from {
+	opacity:1;
+      }
+      to { 
+	opacity:0;
+        width:0px;
+      }
+    }
+
+    .fade-out {
+      animation: fadeOut 3s forwards;
+    }
+
+    .col-lg-2.fade-out{
+      padding:0px!important;
+    }
+
+    .display-flex{
+      display:flex;
+    }
+
+    .career-head{
+      min-height:400px;
+      color:#FFF;
+      font-size: 5rem;
+      padding-top: 70px;
+      font-weight: 500;	
+    }
+
+    @media (min-width: 768px) {
+       .career-head{
+          min-height:400px;
+          color:#FFF;
+          font-size: 6rem;
+          padding-top: 100px;
+          font-weight: 500;	
+       }
+
+       .slide-fill{
+          height:350px;
+       }
+
+       .slide-fill img{
+          height:300px;
+       }
+
+       .w-lg-50{
+          width:50%;
+       }
+
+       .certif-slide {
+	  margin-left:-200px
+       }
+
+    .owl-dots{
+      position: absolute;
+      right: 0px;
+      top: -60px;
+    }
+
+    .owl-dot{
+      height:33px;
+      width:33px;
+      background-color:#C5F2EE!important;
+      border:5px solid #1EADA2!important;
+      border-radius: 50%;
+      margin:0px 3px;
+    }
+    .owl-dot span{
+      background-color:#C5F2EE!important;
+    }
+    .owl-dot.active span{
+      height:17px!important;
+      width:17px!important;
+      margin:3.2px!important;
+      background-color: #1EADA2!important;
+    }
+
+       .filter-select{
+	 background-color: #65DBEE;
+ 	 border-radius: 0px 10px 10px 0px;
+	 padding: 5px 15px;
+ 	 width:400px;	
+ 	 font-size:1.5rem;
+ 	 color:#FFF;
+ 	 border:0px;
+ 	 font-weight:500;
+	 appearance: none;
+  	 -webkit-appearance: none;
+  	 -moz-appearance: none;
+	}
+
+	.filter-icon{
+	 margin-left:-35px;
+	 margin-right:18px;
+	 padding-top:13px;
+	 font-size:1.3rem;
+	 color:#FFF;
+	}
+
+        #contact-us p{
+         font-weight:350;
+         font-size:1rem;
+        }
+
+        #contact-us .contact{
+         height: fit-content;
+        }
+
+        .copyright{
+         background-color:#5F5F5F;
+         font-weight: 400;
+         color: #FFF;
+         font-size: 1rem;
+        }
+
+        .contact-content{
+         width:max-content;
+        }
+    }
+
+    .custom-slideInUp {
+      opacity: 0;
+      animation: customSlideInUp 1s ease-in-out forwards;
+    }
+
+    @keyframes customSlideInUp{
+      0% {
+        transform: translateY(200px); 
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0); 
+        opacity: 1;
+      }
+    }

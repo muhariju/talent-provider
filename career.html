@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="img/logo/icon.png" type="image/x-icon" id="dynamic-icon">
+  <title>PT. Nusantara Duta Solusindo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- Owl Carousel CSS and JS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" type="text/css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" type="text/css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top d-block bg-white pb-0">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand" href="#">
+       <img src="img/logo/logo.png" height="">
+    </a>
+
+    <!-- Hamburger toggle button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Menu items -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#solution-and-services">Solution & Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#solution-and-certifications">Technologies & Certifications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#reference">References</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link" href="index.html#contact-us">Contact Us</a>
+        </li>
+        <li class="nav-item py-2 py-md-0">
+          <a class="text-decoration-none btn-career" href="career.html"><span>CAREER<span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-2 w-100">
+  <hr class="nav-line"></hr>
+  </div>
+</nav>
+
+<div class="position-relative">
+<div class="d-block">
+<div class="bg-slide w-100 text-center pb-1 pb-lg-5 career-head">
+  WE'RE Hiring
+</div>
+</div>
+   <svg class="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+   <path fill="#fff" fill-opacity="1" d="M0,224L120,240C240,256,480,288,720,288C960,288,1200,256,1320,240L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+   </svg>
+</div>
+
+<div id="career" class="container-fluid pt-4 pt-lg-3">
+<div class="row">
+  <div class="col-12 col-lg-7 me-auto mb-2">
+    <div class="col-12 d-flex">
+      <label class="filter-label ms-auto fs-6 py-2 py-lg-2">Position</label>
+      <select id="reference-filter" class="filter-select col-5 me-auto me-lg-0 fs-6" onchange="return filter()">
+        <option value="All">All</option>
+        <option value="BE">Backend Developer</option>
+        <option value="FE">Frontend Developer</option>
+        <option value="DE">Data Engineer</option>
+        <option value="QA">Quality Assurance</option>
+      </select>
+      <i class="fa-solid fa-angle-down filter-icon"></i>
+    </div>
+    <hr class="line-s mt-3"></hr>
+  </div>
+  <div class="col-12 col-lg-10 mx-auto row" id="ref-list">
+  </div>
+</div>
+</div>
+
+<div id="contact-us" class="container-fluid mt-4 bg-foot">
+<div class="row">
+  <div class="ms-auto col-lg-2 p-4 d-none d-lg-block">
+    <img src="img/foot/logo.png" class="w-100">
+  </div>
+  <div class="col-12 col-lg-9 pt-lg-5 row mx-0 contact">
+    <div class="col-12 mb-4">
+      <h2 class="text-white mt-4">CONTACT US</h2>
+      <hr class="line-foot mt-2"></hr>
+    </div>
+    <div class="col-12 contact-content">
+      <h5>NORTHRIDGE BUSINESS CENTER OFFICE<h5>
+      <p>
+	Ruko Northridge Business Center, Blok A1 No. 18<br>
+	Jl. Komp. BSD, Lengkong Wetan, Kec. Serpong,<br>
+	Kota Tangerang Selatan, Banten, 15331, Indonesia<br>
+	Phone : +62 21 5050 5060<br>
+	Email  : marketing@nds.co.id
+      </p>
+    </div>
+    <div class="col-12 contact-content">
+      <h5>CIBUBUR COUNTRY OFFICE<h5>
+      <p>
+	Ruko Cibubur Country, Blok 1 No. 32<br>
+	Jl. Letda Natsir, Cikeas Udik, Gunung Putri,<br>
+	Kabupaten Bogor, Jawa Barat 16966, Indonesia<br>
+	Phone : +62 21 5050 5060<br>
+	Email  : marketing@nds.co.id
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="copyright text-center py-lg-3 py-2 w-100">
+  © 2025 PT Nusantara Duta Solusindo. All Rights Reserved
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+
+var reference = [
+["FE","Frontend Developer","Jakarta",
+	[
+	"Bachelor's Degree in Computer Science or equivalent",
+	"Minimum 2 years experience",
+	"Having handled project with React JS",
+	"Experienced using axios, functional class, state and hooks.",
+	"Good personal attitude, self motivated and communication",
+	"Good problem-solving skills",
+	"Hard-working, and fully dedicated",
+	]
+],
+["FE","Frontend Developer","Tangerang",
+	[
+	"Bachelor's Degree in Computer Science or equivalent",
+	"Minimum 1 years experience",
+	"Having handled project with React JS",
+	"Experienced using axios, functional class, state and hooks.",
+	"Good personal attitude, self motivated and communication",
+	"Good problem-solving skills",
+	"Hard-working, and fully dedicated",
+	]
+],
+["BE","Java Backend Developer","Jakarta",
+	[
+	"Bachelor's Degree in Computer Science or equivalent",
+	"Minimum 1 years experience",
+	"Having handled project with Java Springboot",
+	"Experienced using JPA, JWT, Kafka and PostgreSQL.",
+	"Good personal attitude, self motivated and communication",
+	"Good problem-solving skills",
+	"Hard-working, and fully dedicated",
+	]
+],
+["DE","Data Engineer","Jakarta",
+	[
+	"Bachelor's Degree in Computer Science or equivalent",
+	"Minimum 3 years experience",
+	"Having handled project with GCP",
+	"Haveing knowledge about ETL, Data Warehouse, Data Pipline and Data Visual.",
+	"Good personal attitude, self motivated and communication",
+	"Good problem-solving skills",
+	"Hard-working, and fully dedicated",
+	]
+],
+["QA","Quality Assurance","Tangerang",
+	[
+	"Bachelor's Degree in Computer Science or equivalent",
+	"Minimum 1 years experience",
+	"Experience as Quality Control or Quality Assurance",
+	"Experienced manual and automation testing",
+	"Good personal attitude, self motivated and communication",
+	"Good problem-solving skills",
+	"Hard-working, and fully dedicated",
+	]
+],
+];
+
+const ref = document.getElementById("ref-list");
+reference.forEach(text => {
+  var detail = "<ul>";
+  text[3].forEach(tx => { detail += "<li>"+tx+"</li>"; })
+  detail += "</ul>";
+  const itemDiv = document.createElement("div");
+  itemDiv.className = "col-lg-4 col-12 p-2 "+text[0];
+  itemDiv.innerHTML = 	'<div class="rounded-top-4 p-3 h5 mb-0 d-flex bg-dark text-white">'
+			+ '<div>'+text[1]+'</div>'
+			+ '</div>'
+			+'<div class="bg-white p-3 border-start border-end fs-6">'
+			+ '<div class="w-100">'+detail+'</div>'
+			+ '<button class="mt-2 btn w-100 btn-sm bg-nds ms-auto text-white" onclick="return $(`#myModal`).modal(`show`)"><h6 class="m-0">APPLY</h6></button>'
+			+ '</div>'
+			+'<div class="rounded-bottom-2 p-2 px-3 text-end bg-secondary text-white">'
+			+ '<i class="fas fa-map-marker-alt"></i> Jakarta'
+			+ '</div>';
+  ref.appendChild(itemDiv);
+});
+
+function filter(){
+  var ref = document.getElementById("reference-filter").value;
+  if(ref!="ITC"){$(".ITC").removeClass("fade-out");$(".ITC").addClass("fade-out");}
+  if(ref!="ITSD"){$(".ITSD").removeClass("fade-out");$(".ITSD").addClass("fade-out");}
+  if(ref!="ITOH"){$(".ITOH").removeClass("fade-out");$(".ITOH").addClass("fade-out");}
+  if(ref!="ITPI"){$(".ITPI").removeClass("fade-out");$(".ITPI").addClass("fade-out");}
+  if(ref!="ITSM"){$(".ITSM").removeClass("fade-out");$(".ITSM").addClass("fade-out");}
+  $("."+ref).removeClass("fade-out");
+  $("."+ref).addClass("fade-in");
+  $(".fade-in").removeClass("d-none");
+  $(".fade-out").addClass("d-none");
+  if(ref=="All"){$(".reference").removeClass("fade-out");$(".reference").removeClass("d-none");$(".reference").addClass("fade-in");}
+}
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <!-- Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">APPLY NOW</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        Kirimkan CV anda melalui email:<br>
+	To: <b>recruitment@nds.co.id</b><br>
+	Subject: <b>POSISI - NAMA LENGKAP</b><br><br>
+	Terimakasih, kami tunggu CV anda!
+	
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer">
+      </div>
+
+    </div>
+  </div>
+</div>
