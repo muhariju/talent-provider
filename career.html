@@ -218,16 +218,14 @@ reference.forEach(text => {
 
 function filter(){
   var ref = document.getElementById("reference-filter").value;
-  if(ref!="ITC"){$(".ITC").removeClass("fade-out");$(".ITC").addClass("fade-out");}
-  if(ref!="ITSD"){$(".ITSD").removeClass("fade-out");$(".ITSD").addClass("fade-out");}
-  if(ref!="ITOH"){$(".ITOH").removeClass("fade-out");$(".ITOH").addClass("fade-out");}
-  if(ref!="ITPI"){$(".ITPI").removeClass("fade-out");$(".ITPI").addClass("fade-out");}
-  if(ref!="ITSM"){$(".ITSM").removeClass("fade-out");$(".ITSM").addClass("fade-out");}
-  $("."+ref).removeClass("fade-out");
+  $(".loker").removeClass("d-none");
+  $(".loker").addClass("d-none");
+  $("."+ref).removeClass("d-none");
   $("."+ref).addClass("fade-in");
-  $(".fade-in").removeClass("d-none");
-  $(".fade-out").addClass("d-none");
-  if(ref=="All"){$(".reference").removeClass("fade-out");$(".reference").removeClass("d-none");$(".reference").addClass("fade-in");}
+  if(ref=="All"){
+	$(".loker").removeClass("d-none");
+	$(".loker").addClass("fade-in");
+  }
 }
 </script>
 
@@ -259,3 +257,4 @@ function filter(){
   </div>
 
 </div>
+
